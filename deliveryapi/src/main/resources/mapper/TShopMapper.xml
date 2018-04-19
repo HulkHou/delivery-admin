@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hulk.deliveryapi.dao.TShopMapper">
+  <resultMap id="BaseResultMap" type="com.hulk.deliveryapi.model.TShop">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="shop_id" jdbcType="INTEGER" property="shopId" />
+    <result column="shop_sn" jdbcType="VARCHAR" property="shopSn" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="shop_name" jdbcType="VARCHAR" property="shopName" />
+    <result column="shop_mobile" jdbcType="VARCHAR" property="shopMobile" />
+    <result column="shop_img" jdbcType="VARCHAR" property="shopImg" />
+    <result column="shop_tag" jdbcType="VARCHAR" property="shopTag" />
+    <result column="shop_desc" jdbcType="VARCHAR" property="shopDesc" />
+    <result column="shop_address" jdbcType="VARCHAR" property="shopAddress" />
+    <result column="is_invoice" jdbcType="BIT" property="isInvoice" />
+    <result column="shipping_fee" jdbcType="DECIMAL" property="shippingFee" />
+    <result column="shipping_free_fee" jdbcType="DECIMAL" property="shippingFreeFee" />
+    <result column="shipping_start_fee" jdbcType="DECIMAL" property="shippingStartFee" />
+    <result column="shipping_start_time" jdbcType="TIMESTAMP" property="shippingStartTime" />
+    <result column="shipping_end_time" jdbcType="TIMESTAMP" property="shippingEndTime" />
+    <result column="shipping_least_time" jdbcType="VARCHAR" property="shippingLeastTime" />
+    <result column="service_start_time" jdbcType="TIMESTAMP" property="serviceStartTime" />
+    <result column="service_end_time" jdbcType="TIMESTAMP" property="serviceEndTime" />
+    <result column="shop_active" jdbcType="BIT" property="shopActive" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+  </resultMap>
+</mapper>

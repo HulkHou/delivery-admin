@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hulk.deliveryapi.dao.TOrderMapper">
+    <resultMap id="BaseResultMap" type="com.hulk.deliveryapi.model.TOrder">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="order_id" jdbcType="INTEGER" property="orderId"/>
+        <result column="order_sn" jdbcType="VARCHAR" property="orderSn"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="shop_id" jdbcType="INTEGER" property="shopId"/>
+        <result column="order_status" jdbcType="BIT" property="orderStatus"/>
+        <result column="address_id" jdbcType="INTEGER" property="addressId"/>
+        <result column="postscript" jdbcType="VARCHAR" property="postscript"/>
+        <result column="is_invoice" jdbcType="BIT" property="isInvoice"/>
+        <result column="goods_amount" jdbcType="DECIMAL" property="goodsAmount"/>
+        <result column="shipping_fee" jdbcType="DECIMAL" property="shippingFee"/>
+        <result column="order_amount" jdbcType="DECIMAL" property="orderAmount"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="confirm_time" jdbcType="TIMESTAMP" property="confirmTime"/>
+        <result column="shipping_time" jdbcType="TIMESTAMP" property="shippingTime"/>
+    </resultMap>
+
+    <select id="selectByUserId" resultType="com.hulk.deliveryapi.model.TOrder">
+      SELECT
+	    o.order_sn AS "orderSn",
+	    s.shop_name AS "shopName",
+	    s.shop_mobile AS "shopMobile",
+	    o.shipping_time AS "shippingTime",
+	    o.goods_amount AS "goodsAmount",
+	    o.order_status AS "orderStatus",
+	    a.consignee,
+	    o.shipping_fee AS "shippingFee"
+      FROM
+	    t_order o
+      INNER JOIN t_shop s ON o.shop_id = s.shop_id
+      INNER JOIN t_address a ON o.address_id = a.address_id
+      WHERE
+	    o.user_id = #{userId};
+    </select>
+
+</mapper>

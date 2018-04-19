@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hulk.deliveryapi.dao.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.hulk.deliveryapi.model.SysUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="roleid" jdbcType="VARCHAR" property="roleid" />
+    <result column="deptid" jdbcType="INTEGER" property="deptid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="errorcount" jdbcType="INTEGER" property="errorcount" />
+    <result column="logintime" jdbcType="TIMESTAMP" property="logintime" />
+    <result column="loginip" jdbcType="VARCHAR" property="loginip" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="createby" jdbcType="VARCHAR" property="createby" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="updateby" jdbcType="VARCHAR" property="updateby" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+  </resultMap>
+</mapper>
